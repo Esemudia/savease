@@ -1,0 +1,262 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="register.master.cs" Inherits="saveasze.register1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Savease - Instant Deposit</title>
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="icon" href="assets/images/fav_icon.ico" type="image/ico">
+
+    <style>
+        .container-fluid {
+            background: url('dashboard/assets/images/dashboard-bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right bottom;
+            -webkit-filter: blur(7px) brightness(10px);
+            height: 100vh;
+        }
+        
+        .container-fluid::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            opacity: 0.2;
+            filter: blur(7px) brightness(10px);
+        }
+        
+        .wrapper-div {
+            height: 90vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #FFFFFF;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            /* inset 0px 4px 4px rgba(0, 0, 0, 0.25) */
+            border-radius: 14px;
+        }
+        
+        .wrapper-div .row {
+            height: 100%;
+        }
+        
+        .inner-div,
+        .inner-form-div {
+            height: 100%;
+        }
+        
+        .inner-div {
+            background-image: url('assets/images/form-bg.jpg');
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: cover;
+            border-radius: 14px 0 0 14px;
+        }
+        
+        form {
+            font-size: 14px;
+            margin: auto;
+            background-color: transparent;
+        }
+        
+        form h4 {
+            font-weight: bold;
+            font-size: 18px;
+            color: #131D33;
+            margin-top: 20px;
+        }
+        
+        form h4 span {
+            font-size: 14px;
+            color: #546E7A;
+        }
+        /* Hide all steps by default: */
+        
+        .multiple-tab {
+            display: none;
+        }
+        
+        form .form-control {
+            width: 100%;
+            border: unset;
+            position: relative;
+            margin-bottom: 10px;
+            background-color: transparent;
+        }
+        /* .form-control label {
+            position: absolute;
+            top: 50%;
+            left: 16.5%;
+            font-size: 20px;
+            font-weight: 400;
+            color: #131D33;
+        } */
+        
+        .form-control input {
+            width: 100%;
+            font-size: 12px;
+            font-weight: 400;
+            color: #131D33;
+            outline: unset;
+            background-color: #E6E8EC;
+            background-repeat: no-repeat;
+            /* background-size: 6%; */
+            background-position: 15.5px;
+            padding: 8px 19px 8px 55px;
+            border: 1px solid #546E7A;
+            border-radius: 5px;
+        }
+        /* .form-control input:active label {
+            transform: translateY(0%);
+        } */
+        
+        .form-control a,
+        form p a,
+        .form-control a:focus,
+        form p a:focus,
+        .form-control a:hover,
+        form p a:hover,
+        .form-control a:active,
+        form p a:active {
+            text-decoration: none;
+            color: #131D33;
+        }
+        
+        .form-control .btn {
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .form-control .blue-button {
+            background-color: #131D33;
+            color: #FFFFFF;
+        }
+        
+        .form-control .blue-button:focus,
+        .form-control .blue-button:hover,
+        .form-control .blue-button:active {
+            border: 1.5px solid #131D33;
+            background-color: #fff;
+            color: #131D33;
+        }
+        
+        form p {
+            font-size: 12px;
+            color: #607D8B;
+        }
+        /* Make circles that indicate the steps of the form: */
+        
+        form .step {
+            height: 2.8px;
+            width: 15px;
+            background-color: #bbbbbb;
+            border: none;
+            display: inline-block;
+            opacity: 0.5;
+            margin-bottom: 13px;
+        }
+        
+        .step.active {
+            opacity: 1;
+        }
+        /* Mark the steps that are finished and valid: */
+        
+        .step.finish {
+            background-color: #131D33;
+        }
+        
+        .multiple-tab {
+            margin-top: 10px;
+        }
+        
+        @media screen and (max-width: 991px) {
+            .wrapper-div {
+                height: 100vh;
+            }
+            .inner-div {
+                display: none;
+            }
+            .inner-form-div {
+                width: 100%;
+                height: 100vh;
+            }
+            .inner-form-div form {
+                margin-top: 0px;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            form h4 {
+                margin-top: 5px;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 21px;
+                color: #131D33;
+            }
+            form h4 span {
+                font-size: 12px;
+                line-height: 10px;
+            }
+            form .form-control {
+                width: 100%;
+                border: unset;
+                position: relative;
+                margin-bottom: 10px;
+            }
+            .form-control input {
+                width: 100%;
+                height: 35px;
+            }
+            .form-control .btn {
+                height: 35px;
+                border-radius: 9px;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 21px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class=" col-lg-4 col-md-7 col-12 wrapper-div">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-12 inner-form-div d-flex pt-3 pb-3">
+    <form id="form1" runat="server" class="col-12 col-md-11 my-4">
+        
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        
+    </form>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+   
+</body>
+</html>

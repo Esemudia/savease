@@ -1,0 +1,433 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+}
+
+.side-nav .side-list-item .side-list-link span {
+    color: #607D8B !important;
+    font-weight: bolder !important;
+    font-style: var(--nav-font-style);
+    font-size: 15px;
+    line-height: 21px;
+    display: inline-block;
+}
+
+svg.a {
+    fill: #131D33 !important;
+}
+
+button.side-list-link {
+    background-color: transparent;
+    border: none;
+    outline: none !important;
+}
+
+.mail-inbox-button {
+    background: rgba(96, 125, 139, 0.37);
+    border-radius: 5px;
+}
+
+.nav-pills,
+.tab-content {
+    height: 100vh;
+    background: #FFFFFF;
+    border-radius: 3px;
+}
+
+.nav-pills .nav-link:link {
+    color: #131D33;
+    font-weight: bold;
+    line-height: 21px;
+    position: relative;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:focus,
+.nav-pills .nav-link:hover {
+    background: rgba(19, 29, 51, 0.07) !important;
+}
+
+.nav-link.compose,
+.nav-link.compose.active,
+.nav-link.compose:focus,
+.nav-link.compose:hover {
+    background: #131D33 !important;
+    color: #fff !important;
+}
+
+.batch {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    font-weight: bold;
+    line-height: 21px;
+    text-align: center;
+    padding: 0.5px 5px;
+}
+
+.inbox {
+    background: rgba(85, 205, 108, 0.11);
+    color: #55CD6C;
+}
+
+.sent {
+    background: rgba(255, 196, 0, 0.38);
+    color: #FA9928;
+}
+
+#v-pills-newMessage>div>div>p.col-7.mt-2 {
+    font-weight: bold;
+    line-height: 21px;
+    /* identical to box height */
+    color: #000000;
+}
+
+#v-pills-newMessage>div>div>p.col-5.mt-2.text-right>button,
+#v-pills-newMessage>div>div>form>div>div>button:nth-child(1) {
+    background: #131D33;
+    border-radius: 5px;
+    font-weight: bold;
+    line-height: 19px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+#v-pills-newMessage>div.col-12.pl-3.pr-3>div>form>div>div.col-4.text-right>button {
+    background-color: transparent;
+    color: #131D33;
+}
+
+.dashboard-form textarea {
+    width: 100%;
+    padding: 10px;
+    padding-left: 42px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #607D8B;
+    outline: none;
+}
+
+.dashboard-form button {
+    position: unset;
+    top: unset;
+    left: unset;
+    transform: unset;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.tab-content #v-pills-inbox>div>form>button>svg {
+    fill: #131D33;
+}
+
+#v-pills-inbox>div.col-12.pl-3.pr-1.pt-4>div>div.col-7.row.p-0>div>p {
+    font-weight: bold;
+    line-height: 19px;
+    /* identical to box height */
+    color: #607D8B;
+}
+
+#multiCollapseExample1 {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#multiCollapseExample1>div:nth-child(1) {
+    background-color: transparent;
+}
+
+#pills-tab.response {
+    height: unset;
+}
+
+#pills-reply-tab,
+#pills-forward-tab {
+    border: 0.5px solid #607D8B;
+    border-radius: 5px;
+    font-weight: bold;
+    line-height: 19px;
+    /* identical to box height */
+    color: #546E7A;
+    padding: .375rem .75rem;
+}
+
+#pills-reply-tab.active,
+#pills-forward-tab.active {
+    background-color: transparent !important;
+}
+
+#reply,
+textarea.col-12 {
+    border: none;
+}
+
+div.col-8>button:nth-child(1) {
+    background: #131D33;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#pills-reply {
+    padding: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Summary Components */
+
+.summary--index--card {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.summary--card-head {
+    width: 100%;
+}
+
+.summary--card-body {
+    width: 100%;
+    text-align: center;
+}
+
+.summary--card-footer {
+    width: 100%;
+}
+
+.summary--index--card .summary--card-head h5 {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #607D8B;
+}
+
+.summary--index--card .summary--card-head h6 {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 21px;
+    color: #131D33;
+}
+
+.summary--index--card .summary--card-body h2 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 75px;
+    /* identical to box height */
+    color: #131D33;
+}
+
+.summary--index--card .summary--card-body p {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    color: #607D8B;
+}
+
+.summary--index--card .summary--card-footer p {
+    font-weight: bold;
+    font-size: 14.5px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #607D8B;
+}
+
+.summary--index--card .summary--card-footer p span {
+    font-weight: inherit;
+    font-size: 12.5px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #55CD6C;
+}
+
+.summary--btn {
+    background: #E6E8EC;
+    color: #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    transition: .3s ease;
+}
+
+.date-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.summary--btn:focus,
+.summary--btn:hover,
+.summary--btn:active {
+    background: #607D8B;
+    color: #ffffff;
+}
+
+.custom-checkbox-container {
+    position: absolute;
+    top: 60%;
+    left: 1%;
+    transform: translateY(-40%);
+}
+
+.custom-checkbox-label {
+    display: block;
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.custom-checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 18px;
+    width: 18px;
+    background: rgba(96, 125, 139, 0.47);
+    border-radius: 5px;
+}
+
+.custom-checkbox-label .checkmark:after {
+    display: none;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid #131D33;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: block;
+}
+
+.custom-checkbox-label input:checked~.checkmark {
+    background: rgba(96, 125, 139, 0.47);
+}
+
+.custom-checkbox-label input:checked~.checkmark:after {
+    display: block;
+}
+
+.mail-card-list {
+    background-color: #ffffff;
+    transition: .3s ease;
+    position: relative;
+    margin-bottom: 1em;
+    padding: 7.5px 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.mail-card-link:hover,
+.mail-card-link:focus {
+    text-decoration: none;
+}
+
+.mail-card-list:hover,
+.mail-card-list.active {
+    background: rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.mail-card-list .name-batch-container {
+    text-align: center;
+}
+
+.mail-card-list .name-batch-container p,
+p.col-4,
+span.text-right:nth-child(1) {
+    font-weight: bold;
+    line-height: 19px;
+    color: #000000;
+    font-size: 0.75rem;
+    padding-left: 30px;
+}
+
+.mail-card-list .name-batch-container h4.name-batch,
+h4.p-1 {
+    background: rgba(96, 125, 139, 0.47);
+    border-radius: 5px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    color: #546E7A;
+    text-transform: uppercase;
+}
+
+.mail-card-link .mail-card-list-body h5 {
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 19px;
+    /* identical to box height */
+    color: #000000;
+    font-size: 1.15rem;
+}
+
+.mail-card-link .mail-card-list-body span {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 19px;
+    /* identical to box height */
+    color: #000000;
+}
+
+.mail-card-link .mail-card-list-body p {
+    overflow: hidden;
+    position: relative;
+    max-height: 3.6em;
+    text-align: justify;
+    margin-right: -10em;
+    padding-right: 10em;
+    font-weight: normal;
+    line-height: 1.2em;
+    color: #000000;
+    font-size: 1rem;
+}
+
+.mail-card-link .mail-card-list-body p:before {
+    content: '...';
+    position: absolute;
+    right: 9em;
+    bottom: 0;
+}
+
+.buttn-primary {
+    border: 0.5px solid #607D8B;
+    border-radius: 5px;
+    font-weight: bold;
+    line-height: 19px;
+    /* identical to box height */
+    color: #546E7A;
+}

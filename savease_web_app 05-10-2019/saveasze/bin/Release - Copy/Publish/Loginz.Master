@@ -1,0 +1,304 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Loginz.master.cs" Inherits="saveasze.Loginz" %>
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- Start Login Interface-->
+    
+     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+    <link rel="stylesheet" type="text/css" href="csslogin/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="csslogin/fontawesome-all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="csslogin/iofrm-style.css"/>
+    <link rel="stylesheet" type="text/css" href="csslogin/iofrm-theme3.css"/>
+    <!-- End Login Interface-->
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+    
+     <link runat="server" rel="shortcut icon" href="ico/fav_icon.ico" type="image/x-icon" />
+    <link runat="server" rel="icon" href="ico/fav_icon.ico" type="image/ico" />
+<link rel="manifest" href="/manifest.json" />
+<meta name="msapplication-TileColor" content="#ffffff" />
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+<meta name="theme-color" content="#ffffff" />
+      <script type="text/javascript">
+          function date_time(id) {
+              date = new Date;
+              year = date.getFullYear();
+              month = date.getMonth();
+              months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
+              d = date.getDate();
+              day = date.getDay();
+              days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+              h = date.getHours();
+              if (h < 10) {
+                  h = "0" + h;
+              }
+              m = date.getMinutes();
+              if (m < 10) {
+                  m = "0" + m;
+              }
+              s = date.getSeconds();
+              if (s < 10) {
+                  s = "0" + s;
+              }
+              result = '' + days[day] + ' ' + months[month] + ' ' + d + ' ' + year + ' ' + h + ':' + m + ':' + s;
+              document.getElementById(id).innerHTML = result;
+              setTimeout('date_time("' + id + '");', '1000');
+              return true;
+          }
+      </script>
+    
+<style type="text/css">
+
+a { text-decoration: none; }
+h1 { font-size: 1em; }
+h1, p {
+margin-bottom: 10px;
+}
+strong {
+font-weight: bold;
+}
+.uppercase { text-transform: uppercase; }
+
+/* ---------- LOGIN ---------- */
+/*#login {
+width: 300px;
+}
+ fieldset input[type="text"], input[type="password"] {
+background-color: #e5e5e5;
+border: none;
+border-radius: 3px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+color: #5a5656;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+font-size: 14px;
+height: 50px;
+outline: none;
+padding: 0px 10px;
+width: 280px;
+-webkit-appearance:none;
+}
+ fieldset input[type="submit"] {
+background-color:darkorange;
+border: none;
+border-radius: 3px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+color: #f4f4f4;
+cursor: pointer;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+height: 50px;
+text-transform: uppercase;
+width: 200px;
+-webkit-appearance:none;
+}
+ fieldset a {
+color: #5a5656;
+font-size: 10px;
+}
+ fieldset a:hover { text-decoration: underline; }
+.btn-round {
+background-color: #5a5656;
+border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+color: #f4f4f4;
+display: block;
+font-size: 12px;
+height: 50px;
+line-height: 50px;
+margin: 30px 125px;
+text-align: center;
+text-transform: uppercase;
+width: 50px;
+}*/
+.facebook-before {
+background-color: #0064ab;
+border-radius: 3px 0px 0px 3px;
+-moz-border-radius: 3px 0px 0px 3px;
+-webkit-border-radius: 3px 0px 0px 3px;
+color: #f4f4f4;
+display: block;
+float: left;
+height: 50px;
+line-height: 50px;
+text-align: center;
+width: 50px;
+}
+.facebook {
+background-color: #0079ce;
+border: none;
+border-radius: 0px 3px 3px 0px;
+-moz-border-radius: 0px 3px 3px 0px;
+-webkit-border-radius: 0px 3px 3px 0px;
+color: #f4f4f4;
+cursor: pointer;
+height: 50px;
+text-transform: uppercase;
+width: 250px;
+}
+.twitter-before {
+background-color: #189bcb;
+border-radius: 3px 0px 0px 3px;
+-moz-border-radius: 3px 0px 0px 3px;
+-webkit-border-radius: 3px 0px 0px 3px;
+color: #f4f4f4;
+display: block;
+float: left;
+height: 50px;
+line-height: 50px;
+text-align: center;
+width: 50px;
+}
+.twitter {
+background-color: #1bb2e9;
+border: none;
+border-radius: 0px 3px 3px 0px;
+-moz-border-radius: 0px 3px 3px 0px;
+-webkit-border-radius: 0px 3px 3px 0px;
+color: #f4f4f4;
+cursor: pointer;
+height: 50px;
+text-transform: uppercase;
+width: 250px;
+}
+</style>
+    <title>Savease - Nigeria Banking Hub</title>
+</head>
+<body style="background-color:#0E172A;">
+    <form id="form1" runat="server">
+       <Div class="boxed_wrapper_login">
+
+<!-- Menu ******************************* -->
+<section class="header-area theme_menu stricky ">
+    <div class="container">
+        <div class="menu-bg">
+            <div class="row">
+                <div class="col-md-9 menu-column">
+                   <nav class="menuzord" id="main_menu">
+                       <ul class="menuzord-menu">
+                            <li class="home"><a href="Default.aspx"><span class="fa fa-home"></span></a></li>
+
+                            <li><a href="#">How Does It Work?</a>
+                            </li>
+
+                           
+                            <li><a href="#">FAQ</a>                                
+                            </li>
+                           
+
+                        </ul><!-- End of .menuzord-menu -->
+                    </nav> <!-- End of #main_menu -->
+              
+                </div>
+                <div class="right-column">
+                    <div class="right-area">
+                        <div class="nav_side_content">
+                         
+                       </div>
+
+                    </div>
+                        
+                </div>
+            </div>
+        </div>      
+   </div> <!-- End of .conatiner -->
+</section> <!-- End of .theme_menu -->
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+<div class="footer-bottom">
+    <div class="container">
+        <div class="float_left copy-text">
+             <p style="color:white;">Copyrights © 2019 All Rights Reserved. Powered by  <a href="#">Savease Nigeria LLC,</a> a sub-class of Savease Africa.</p>
+            
+            
+        </div>
+        <div class="float_right">
+            <ul class="social">
+                <li>
+                    <a href="#"><i class="fa fa-facebook"></i></a>                              
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-twitter"></i></a>                               
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-skype"></i></a>                             
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>                              
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Scroll Top Button -->
+	<button class="scroll-top tran3s color2_bg">
+		<span class="fa fa-angle-up"></span>
+	</button>
+	<!-- pre loader  -->
+	<div class="preloader"></div>
+
+
+	<!-- jQuery js -->
+	<script src="js/jquery.js"></script>
+	<!-- bootstrap js -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- jQuery ui js -->
+	<script src="js/jquery-ui.js"></script>
+	<!-- owl carousel js -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- jQuery validation -->
+	<script src="js/jquery.validate.min.js"></script>
+	<!-- google map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRvBPo3-t31YFk588DpMYS6EqKf-oGBSI"></script> 
+	<script src="js/gmap.js"></script>
+	<!-- mixit up -->
+	<script src="js/wow.js"></script>
+	<script src="js/jquery.mixitup.min.js"></script>
+	<script src="js/jquery.fitvids.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+	<script src="js/menuzord.js"></script>
+
+	<!-- revolution slider js -->
+	<script src="assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+	<script src="assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+	<!-- fancy box -->
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<script src="js/jquery.polyglot.language.switcher.js"></script>
+	<script src="js/nouislider.js"></script>
+	<script src="js/jquery.bootstrap-touchspin.js"></script>
+	<script src="js/SmoothScroll.js"></script>
+	<script src="js/jquery.appear.js"></script>
+	<script src="js/jquery.countTo.js"></script>
+	<script src="js/jquery.flexslider.js"></script>
+    <script src="js/imagezoom.js"></script> 
+	<script src="js/Chart.js"></script>	
+	<script id="map-script" src="js/default-map.js"></script>
+	<script src="js/custom.js"></script>
+
+</Div>
+
+    </form>
+</body>
+</html>

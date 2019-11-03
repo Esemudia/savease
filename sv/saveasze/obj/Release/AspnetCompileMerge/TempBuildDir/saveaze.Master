@@ -1,0 +1,223 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="saveaze.master.cs" Inherits="saveaze" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0,maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Savease - Instant Deposit</title>
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="icon" href="assets/images/fav_icon.ico" type="image/ico">
+
+    <style>
+        .tab-content {
+            display: none;
+            -webkit-animation: fadeEffect 1s;
+            animation: fadeEffect 1s;
+        }
+        
+        .top-customer h5,
+        .testimonials .section-heading {
+            font-size: 35px;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .banner-3 h3 {
+            color: #FA9928;
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: -20px;
+        }
+        
+        .banner-4 {
+            width: 80%;
+        }
+        
+        @media (max-width: 767px) {
+            .top-customer h5,
+            .testimonials .section-heading {
+                font-size: 25px;
+            }
+        }
+        
+        .top-customer h4 {
+            font-size: 25px;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .top-customer p {
+            font-size: inherit;
+            line-height: 30px;
+        }
+        
+        .top-customer p a:link,
+        .top-customer p a:hover,
+        .top-customer p a:active {
+            background-color: #131D33 !important;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light p-3">
+        <a class="navbar-brand" href="default.aspx"><img src="assets/images/logo.png" alt="" class="img-fluid"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-md-auto mr-0 ml-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarServicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Services
+                      </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarServicesDropdown">
+                        <a class="dropdown-item" href="dashboard/make-deposit.aspx">Make Deposit</a>
+                        <a class="dropdown-item" href="dashboard/transfer.aspx">Transfer</a>
+                        <a class="dropdown-item" href="dashboard/withdrawal.aspx">Withdraw</a>
+                        <a class="dropdown-item" href="dashboard/fund-account.aspx">Fund Account</a>
+                        <!--<a class="dropdown-item" href="#">Savease Business</a>-->
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarAboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About Us
+                          </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarAboutDropdown">
+                        <a class="dropdown-item" href="about.aspx">About</a>
+                        <!--<a class="dropdown-item" href="meet-team.aspx">Meet our Team</a>-->
+                        <a class="dropdown-item" href="faq.aspx">FAQ</a>
+                        <!--<a class="dropdown-item" href="#">Testimonials</a>-->
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.aspx">Contact Us</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav my-2 my-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Support
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="sales-support.aspx">Sales Support</a>
+                        <a class="dropdown-item" href="technical-support.aspx">Technical Support</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-2" href="register.aspx">Create Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn my-2 my-sm-0 p-1 pl-3 pr-3" href="login.aspx">Login | Register</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+
+
+        </asp:ContentPlaceHolder>
+
+  <footer class="container-fluid">
+        <div class="row">
+            <div class="col-12 row pt-4 pb-4">
+                <div class="col-12 col-md-4 col-lg-3 logo d-flex mb-md-0 mb-5">
+                    <img src="assets/images/logo.png" alt="" style="width: 120px;">
+                </div>
+                <div class="col-12 col-md-4 col-lg-2">
+                    <h5 class="col-12 section-heading">Discover Savease</h5>
+                    <ul class="col-12">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy and Terms</a></li>
+                        <li><a href="#">Working With Us</a></li>
+                        <li><a href="#">Our Solutions</a></li>
+                        <li><a href="#">Savease Social Media</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-2">
+                    <h5 class="col-12 section-heading">Get in Touch</h5>
+                    <ul class="col-12">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Technical Support</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="tel:+2349090692222">Call Us Now 0700SAVEASE</a></li>
+                        <li><a href="mailto:Info@savease.ng">Send Us an email Info@savease.ng</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-2">
+                    <h5 class="col-12 section-heading">Information For</h5>
+                    <ul class="col-12">
+                        <li><a href="#">Vendor / Savease Agent</a></li>
+                        <li><a href="#">Join Our Team</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-2">
+                    <h5 class="col-12 section-heading">Location</h5>
+                    <ul class="col-12">
+                        <p>
+                            1C, Evo Crescent, GRA II, Portharcourt, Rivers State, Nigeria.
+                        </p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-div col-12 pt-3 pb-3">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-sm-6 col-md-8 mb-2 mb-md-0">
+                Copyrights © 2019 All Rights Reserved. Powered by Savease Nigeria LLC, a sub-class of Savease Africa.
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 text-center">
+                <div class="row align-items-center">
+                    <ul class="col-12 m-0">
+                        <li class="mt-1">
+                            <a href="">
+                                <img src="assets/images/linkedin.png" alt="" width="27" height="27">
+                            </a>
+                        </li>
+                        <li class="mt-1">
+                            <a href="">
+                                <img src="assets/images/instagram.png" alt="" width="27" height="27">
+                            </a>
+                        </li>
+                        <li class="mt-1">
+                            <a href="">
+                                <img src="assets/images/twitter.png" alt="" width="27" height="27">
+                            </a>
+                        </li>
+                        <li class="mt-1">
+                            <a href="">
+                                <img src="assets/images/facebook.png" alt="" width="27" height="27">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="scrollButton" class="scroll-button" onclick="topFunction()">
+        <img src="assets/images/up-arrow.png" alt="" width="13" height="13">
+    </button>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>  
+    </form>
+</body>
+</html>

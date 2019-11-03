@@ -1,0 +1,410 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="adm.master.cs" Inherits="saveasze.admin.adm" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <meta charset="UTF-8" />
+    <script type="text/javascript" language="javascript">
+            function DisableBackButton() {
+            window.history.forward()
+            }
+            DisableBackButton();
+            window.onload = DisableBackButton;
+            window.onpageshow = function(evt) { if (evt.persisted) DisableBackButton() }
+            window.onunload = function() { void (0) }
+    </script>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="msapplication-TileColor" content="#0061da" />
+		<meta name="theme-color" content="#1643a3" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content="320" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+		<!-- Title -->
+		<title>Savease Control Panel</title>
+
+        <!--Font Awesome-->
+		<link href="assets/plugins/fontawesome-free/css/all.css" rel="stylesheet" />
+
+		<!-- Font Family-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet" />
+
+		<!-- Dashboard Css -->
+		<link href="assets/css/dashboard.css" rel="stylesheet" />
+
+		<!-- vector-map -->
+		<link href="assets/plugins/vector-map/jqvmap.min.css" rel="stylesheet" />
+
+		<!-- Custom scroll bar css-->
+		<link href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+		<!-- Sidemenu Css -->
+		<link href="assets/plugins/toggle-sidebar/css/sidemenu.css" rel="stylesheet">
+
+		<!-- c3.js Charts Plugin -->
+		<link href="assets/plugins/charts-c3/c3-chart.css" rel="stylesheet" />
+		<link href="assets/plugins/morris/morris.css" rel="stylesheet" />
+
+		<!---Font icons-->
+		<link href="assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
+</head>
+<body class="app sidebar-mini rtl">
+    
+        
+		<div id="global-loader" ><div class="showbox"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div></div>
+        <div class="page">
+			<div class="page-main">
+				<!-- Navbar-->
+				<header class="app-header header">
+				
+					<!-- Header Background Animation-->
+					<div id="canvas" class="gradient"></div>
+					
+					<!-- Navbar Right Menu-->
+					<div class="container-fluid">
+						<div class="d-flex">
+							<a class="header-brand" href="index-2.html">
+								<img alt="ren logo" class="header-brand-img" src="assets/images/brand/logo.png">
+							</a>
+							<a aria-label="Hide Sidebar" class="app-sidebar__toggle" data-toggle="sidebar" href="#"></a>
+							<div class="d-flex order-lg-2 ml-auto">
+								<div class="">
+									<form class="input-icon mt-1 mr-2">
+										
+									</form>
+								</div>
+								<div class="dropdown d-none d-md-flex">
+									<a class="nav-link icon" data-toggle="dropdown">
+										<i class="fas fa-user"></i>
+										<span class="nav-unread bg-green"></span>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+										<a class="dropdown-item d-flex pb-3" href="#">
+											<span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/male/4.jpg)"></span>
+											<div>
+												<strong>Madeleine Scott</strong> Sent you add request
+												<div class="small text-muted">
+													view profile
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item d-flex pb-3" href="#">
+											<span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/female/14.jpg)"></span>
+											<div>
+												<strong>rebica</strong> Suggestions for you
+												<div class="small text-muted">
+													view profile
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item d-flex pb-3" href="#">
+											<span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/male/1.jpg)"></span>
+											<div>
+												<strong>Devid robott</strong> sent you add request
+												<div class="small text-muted">
+													view profile
+												</div>
+											</div>
+										</a>
+										<div class="dropdown-divider"></div><a class="dropdown-item text-center text-muted-dark" href="#">View all contact list</a>
+									</div>
+								</div>
+								<div class="dropdown d-none d-md-flex">
+									<a class="nav-link icon" data-toggle="dropdown">
+										<i class="fas fa-bell"></i>
+										<span class="nav-unread bg-danger"></span>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+										<a class="dropdown-item d-flex pb-3" href="#">
+											<div class="notifyimg">
+												<i class="fas fa-thumbs-up"></i>
+											</div>
+											<div>
+												<strong>Someone likes our posts.</strong>
+												<div class="small text-muted">
+													3 hours ago
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item d-flex pb-3" href="#">
+											<div class="notifyimg">
+												<i class="fas fa-comment-alt"></i>
+											</div>
+											<div>
+												<strong>3 New Comments</strong>
+												<div class="small text-muted">
+													5 hour ago
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item d-flex pb-3" href="#">
+											<div class="notifyimg">
+												<i class="fas fa-cogs"></i>
+											</div>
+											<div>
+												<strong>Server Rebooted.</strong>
+												<div class="small text-muted">
+													45 mintues ago
+												</div>
+											</div>
+										</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item text-center text-muted-dark" href="#">View all Notification</a>
+									</div>
+								</div>
+                               
+								<div class="dropdown d-none d-md-flex">
+									<a class="nav-link icon" data-toggle="dropdown"><i class="fas fa-envelope"></i> <span class="badge badge-info badge-pill">2</span></a>
+									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+										<a class="dropdown-item text-center text-dark" href="#">2 New Messages</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item d-flex pb-3" href="#">
+											<span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/male/41.jpg)"></span>
+											<div>
+												<strong>Madeleine</strong> Hey! there I' am available....
+												<div class="small text-muted">
+													3 hours ago
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item d-flex pb-3" href="#"><span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/female/1.jpg)"></span>
+											<div>
+												<strong>Anthony</strong> New product Launching...
+												<div class="small text-muted">
+													5 hour ago
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item d-flex pb-3" href="#"><span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/female/18.jpg)"></span>
+											<div>
+												<strong>Olivia</strong> New Schedule Realease......
+												<div class="small text-muted">
+													45 mintues ago
+												</div>
+											</div>
+										</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item text-center text-muted-dark" href="#">See all Messages</a>
+									</div>
+								</div>
+								<div class="dropdown" >
+									<a class="nav-link pr-0 leading-none d-flex" data-toggle="dropdown" href="#">
+										
+										<span class="ml-2 d-none d-lg-block">
+                                           
+											 <asp:Label class="text-white" id="lblUsr" runat="server"></asp:Label>
+										</span>
+									</a>
+<%--									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+										<a class="dropdown-item" href="#"><i class="dropdown-icon mdi mdi-account-outline"></i> Profile</a>
+										<a class="dropdown-item" href="#"><i class="dropdown-icon mdi mdi-settings"></i> Settings</a>
+										<a class="dropdown-item" href="#"><span class="float-right"><span class="badge badge-primary">6</span></span> <i class="dropdown-icon mdi mdi-message-outline"></i> Inbox</a>
+										<a class="dropdown-item" href="#"><i class="dropdown-icon mdi mdi-comment-check-outline"></i> Message</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#"><i class="dropdown-icon mdi mdi-compass-outline"></i> Need help?</a>
+										<a class="dropdown-item" href="login.html"><i class="dropdown-icon mdi mdi-logout-variant"></i> Sign out</a>
+									</div>--%>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+
+				<!-- Sidebar menu-->
+				<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+				<aside class="app-sidebar">
+					<ul class="side-menu">
+						<li class="slide">
+							<a class="side-menu__item active"  href="board.aspx"><i class="side-menu__icon fas fa-home"></i><span class="side-menu__label">Dashboard</span></a>
+							</li>
+                        
+                        	<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fas  fa-user"></i>
+                                <span class="side-menu__label">Manage Vendors</span><i class="angle fas fa-angle-right"></i></a>
+							<ul class="slide-menu">
+									<li>
+							<a class="side-menu__item" href="blockpin.aspx"><i class="side-menu__icon fas fa-paperclip"></i><span class="side-menu__label">Block Pin</span></a>
+							</li>
+                                	<li>
+							<a class="side-menu__item" href="users.aspx?utype=2&i00="><i class="side-menu__icon fas fa-paperclip"></i><span class="side-menu__label">Vendors Info</span></a>
+							</li>
+                             <li>
+							<a class="side-menu__item" href="transactions.aspx?utype=2"><i class="side-menu__icon fas fa-money-bill"></i><span class="side-menu__label">Transactions</span></a>
+							</li>
+							</ul>
+						</li>
+                        	<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fas  fa-user"></i><span class="side-menu__label">Manage Users</span><i class="angle fas fa-angle-right"></i></a>
+							<ul class="slide-menu">
+									<li>
+							<a class="side-menu__item" href="users.aspx?utype=1"><i class="side-menu__icon fas fa-paperclip"></i>
+                                <span class="side-menu__label">Users Info</span></a>
+							</li>
+                                <li>
+							<a class="side-menu__item" href="transactions.aspx?utype=1"><i class="side-menu__icon fas fa-money-bill"></i><span class="side-menu__label">Transactions</span></a>
+							</li>
+							</ul>
+						</li>	
+                        	<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fas  fa-user"></i><span class="side-menu__label">Manage Admin</span><i class="angle fas fa-angle-right"></i></a>
+							<ul class="slide-menu">
+                                	<li runat="server" id="LiAdd">
+							<a class="side-menu__item" href="New Admin"><i class="side-menu__icon fas fa-paperclip"></i><span class="side-menu__label">Admin Info</span></a>
+							</li>
+									<li>
+							<a class="side-menu__item" href="password.aspx"><i class="side-menu__icon fas fa-paperclip"></i><span class="side-menu__label">change password</span></a>
+							</li>
+							</ul>
+						</li>	
+						<li class="slide" style="display:none">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fas fa-exclamation-circle"></i><span class="side-menu__label">Error pages</span><i class="angle fas fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li>
+									<a href="400.html" class="slide-item">400 Error</a>
+								</li>
+								<li>
+									<a href="401.html" class="slide-item">401 Error</a>
+								</li>
+								<li>
+									<a href="403.html" class="slide-item">403 Error</a>
+								</li>
+								<li>
+									<a href="404.html" class="slide-item">404 Error</a>
+								</li>
+								<li>
+									<a href="500.html" class="slide-item">500 Error</a>
+								</li>
+								<li>
+									<a href="503.html" class="slide-item">503 Error</a>
+								</li>
+							</ul>
+						</li>
+                        
+                        	<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fas fa-file-alt"></i><span class="side-menu__label">Forms</span><i class="angle fas fa-angle-right"></i></a>
+							<ul class="slide-menu">
+									<li>
+									<a href="form-elements.html" class="slide-item">Form Elements</a>
+								</li>
+								<li>
+									<a href="form-wizard.html" class="slide-item">Form-wizard Elements</a>
+								</li> 
+								<li>
+									<a href="wysiwyag.html" class="slide-item">Text Editor</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a class="side-menu__item" href="reports.aspx"><i class="side-menu__icon fas fa-file"></i><span class="side-menu__label">Reports</span></a>
+						</li>
+                        
+                        	<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fas fa-question-circle"></i><span class="side-menu__label">Help & Support</span><i class="angle fas fa-angle-right"></i></a>
+							<ul class="slide-menu">
+									<li>
+									<a href="complains.aspx" class="slide-item">Complains</a>
+								</li>
+								<li>
+									<a href="feedback.aspx" class="slide-item">Feedbacks</a>
+								</li> 
+								<li>
+									<a href="syslog.aspx" class="slide-item">System Log</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+                    <asp:Label runat="server" ID="lbluname" Visible="false"></asp:Label>
+				</aside>
+
+				<div class="app-content my-3 my-md-5">
+                    <form runat="server" style="width:800px;margin-left:auto;margin-right:auto;">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+                    </form>
+					<footer class="footer">
+						<div class="container">
+							<div class="row align-items-center flex-row-reverse">
+								<div class="col-md-12 col-sm-12 mt-3 mt-lg-0 text-center">
+									Copyright © 2018 <a href="#">Savease</a>. All rights reserved.
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+
+		<!-- Back to top -->
+		<a href="#top" id="back-to-top" style="display: inline;"><i class="fas fa-angle-up"></i></a>
+
+		<!-- Dashboard Core -->
+		<script src="assets/js/vendors/jquery-3.2.1.min.js"></script>
+		<script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/vendors/jquery.sparkline.min.js"></script>
+		<script src="assets/js/vendors/selectize.min.js"></script>
+		<script src="assets/js/vendors/jquery.tablesorter.min.js"></script>
+		<script src="assets/js/vendors/circle-progress.min.js"></script>
+		<script src="assets/plugins/rating/jquery.rating-stars.js"></script>
+		<!-- Side menu js -->
+		<script src="assets/plugins/toggle-sidebar/js/sidemenu.js"></script>
+
+		<!-- Custom scroll bar Js-->
+		<script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script  
+
+        <script src="assets/plugins/datatable/jquery.dataTables.min.js"></script>
+		<script src="assets/plugins/datatable/dataTables.bootstrap4.min.js"></script>
+
+		<!-- c3.js Charts Plugin -->
+		<script src="assets/plugins/charts-c3/d3.v5.min.js"></script>
+		<script src="assets/plugins/charts-c3/c3-chart.js"></script>
+
+		<!-- Input Mask Plugin -->
+		<script src="assets/plugins/input-mask/jquery.mask.min.js"></script>
+        <!-- Progress -->
+        <script src="assets/js/vendors/circle-progress.min.js"></script>
+
+		<!-- 3Dlines-animation -->
+        <script src="assets/plugins/3Dlines-animation/three.min.js"></script>
+        <script src=  "assets/plugins/3Dlines-animation/projector.js"></script>
+        <script src="assets/plugins/3Dlines-animation/canvas-renderer.js"></script>
+        <script src="assets/plugins/3Dlines-animation/3d-lines-animation.js"></script>
+        <script src="assets/plugins/3Dlines-animation/color.js"></script>
+
+		<!-- Vector Map -->
+
+		<script src="assets/plugins/vector-map/jquery.vmap.js"></script>
+		<script src="assets/plugins/vector-map/jquery.vmap.min.js"></script>
+		<script src="assets/plugins/vector-map/jquery.vmap.sampledata.js"></script>
+		<script src="assets/plugins/vector-map/country/jquery.vmap.world.js"></script>
+
+		<!--Counters -->
+		<script src="assets/plugins/counters/counterup.min.js"></script>
+		<script src="assets/plugins/counters/waypoints.min.js"></script>
+
+        <!-- Index Scripts -->
+		<script src="assets/js/index.js"></script>
+		<script src="assets/js/charts.js"></script>
+
+		<!--Counters -->
+		<script src="assets/plugins/counters/counterup.min.js"></script>
+		<script src="assets/plugins/counters/waypoints.min.js"></script>
+		
+		<!--  Chart js -->
+		<script src="assets/plugins/chart/Chart.bundle.js"></script>
+		<script src="assets/plugins/chart/WidgetChart.js"></script>
+	<!-- Select2 js -->
+		<script src="assets/plugins/select2/select2.full.min.js"></script>
+
+		<!-- custom js -->
+		<script src="assets/js/custom.js"></script>
+  
+</body>
+</html>

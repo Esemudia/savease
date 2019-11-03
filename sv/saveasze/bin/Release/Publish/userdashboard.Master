@@ -1,0 +1,210 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="userdashboard.master.cs" Inherits="saveasze.userdashboard" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Savease Frontend</title>
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="icon" href="assets/images/fav_icon.ico" type="image/ico">
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        
+         <!-- The Modal -->
+    <div id="notificationModal" class="notification-modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="row" style="height: inherit">
+                <span class="close-modal col-12">&times;</span>
+                <div class="col-12 profile-status p-3">
+                    <img src="assets/images/form-bg.jpg" alt="" width="80" height="80" class="mb-3">
+                    <h6 class="col-12 mb-2">Victor Agbenro</h6>
+                    <small class="col-12 mb-4 d-block">Vagbenro@yahoo.com</small>
+                    <p class="col-12">Your Plan: Standard</p>
+                    <a href="settings.html#editProfile" class="p-2">Edit Profile</a> <a href="#" class="p-2">Log Out</a>
+                </div>
+                <div class="col-12 notifications pt-3 pb-3 pl-0 pr-0">
+                    <h6 class="col-12 mb-2">Notification</h6>
+                    <div class="notifications-content">
+                        <div class="notifications-tile col-12">
+                            <div class="notifications-tile-header col-12">
+                                <div class="row">
+                                    <span class="col-6 text-left">Transfer</span>
+                                    <span class="col-6 text-right">2/24/2019</span>
+                                </div>
+                            </div>
+                            <div class="notifications-tile-body col-12">
+                                <div class="row">
+                                    <p class="col-12">
+                                        $200,000 tranfer form mike sacease account to your account
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notifications-tile col-12">
+                            <div class="notifications-tile-header col-12">
+                                <div class="row">
+                                    <span class="col-6 text-left">Transfer</span>
+                                    <span class="col-6 text-right">2/24/2019</span>
+                                </div>
+                            </div>
+                            <div class="notifications-tile-body col-12">
+                                <div class="row">
+                                    <p class="col-12">
+                                        $200,000 tranfer form mike sacease account to your account
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notifications-tile col-12">
+                            <div class="notifications-tile-header col-12">
+                                <div class="row">
+                                    <span class="col-6 text-left">Transfer</span>
+                                    <span class="col-6 text-right">2/24/2019</span>
+                                </div>
+                            </div>
+                            <div class="notifications-tile-body col-12">
+                                <div class="row">
+                                    <p class="col-12">
+                                        $200,000 tranfer form mike sacease account to your account
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notifications-tile col-12">
+                            <div class="notifications-tile-header col-12">
+                                <div class="row">
+                                    <span class="col-6 text-left">Transfer</span>
+                                    <span class="col-6 text-right">2/24/2019</span>
+                                </div>
+                            </div>
+                            <div class="notifications-tile-body col-12">
+                                <div class="row">
+                                    <p class="col-12">
+                                        $200,000 tranfer form mike sacease account to your account
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notifications-tile col-12">
+                            <div class="notifications-tile-header col-12">
+                                <div class="row">
+                                    <span class="col-6 text-left">Transfer</span>
+                                    <span class="col-6 text-right">2/24/2019</span>
+                                </div>
+                            </div>
+                            <div class="notifications-tile-body col-12">
+                                <div class="row">
+                                    <p class="col-12">
+                                        $200,000 tranfer form mike sacease account to your account
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="dashboardModal" class="dashboard-modal">
+        <span class="close-dashboard-modal">&times;</span>
+        <div class="modal-content p-5">
+            <div class="row" id="confirmContent">
+                <!-- <img src="assets/images/checked.svg" alt="" class="mb-2 mx-auto">
+                <h3 class="col-12 mb-2 text-center">voucher pin Verfied</h3> -->
+                <p class="col-12 text-left mb-3"><strong>Voucher Pin</strong> : 148620169484</p>
+                <p class="col-12 text-left mb-3"><strong>Bank Name</strong> : Access bank Plc</p>
+                <p class="col-12 text-left mb-3"><strong>Account Number</strong> : 148620169484</p>
+                <p class="col-12 text-left mb-3"><strong>Account Name</strong> : victor segun</p>
+                <p class="col-12 text-left mb-3"><strong>Amount</strong> : 500(Naria)</p>
+                <p class="col-12 text-left mb-3"><strong>Narration</strong> : to Victor</p>
+                <div class="col-12 mt-1 p-0">
+                    <div class="row justify-content-center m-0 p-0">
+                        <button class="btn orange-bg" id="confirmContentButton">Continue</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center" id="statusContent">
+                <div class="col-12 text-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" width="23" height="23" id="backButton"><style>.a{fill:#131D33;}</style><path d="m64.5 122.6c32 0 58.1-26 58.1-58.1s-26-58-58.1-58-58 26-58 58 26 58.1 58 58.1zm0-108c27.5 0 49.9 22.4 49.9 49.9s-22.4 49.9-49.9 49.9-49.9-22.4-49.9-49.9 22.4-49.9 49.9-49.9z" data-original="#131D33" class="active-path" data-old_color="#131D33" class="a"/><path d="m70 93.5c0.8 0.8 1.8 1.2 2.9 1.2 1 0 2.1-0.4 2.9-1.2 1.6-1.6 1.6-4.2 0-5.8l-23.5-23.5 23.5-23.5c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8 0l-26.4 26.4c-0.8 0.8-1.2 1.8-1.2 2.9s0.4 2.1 1.2 2.9l26.4 26.4z" data-original="#131D33" class="active-path" data-old_color="#131D33" class="a"/></svg>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 284 284" fill="none"><style>.a{stroke-width:2;stroke:white;}</style><path d="M142 284C220.4 284 284 220.4 284 142 284 63.6 220.4 0 142 0 63.6 0 0 63.6 0 142 0 220.4 63.6 284 142 284Z" fill="#D75A4A"/><path d="M90.9 193.1L142 142 193.1 90.9" class="a"/><path d="M90.9 90.9L142 142 193.1 193.1" class="a"/></svg>
+                <h3 class="col-12 mb-2 text-center">Oops</h3>
+                <p class="col-12 text-center mb-3">An Error Occured in transaction</p>
+                <div class="col-12 mt-1 mb-3 p-0">
+                    <div class="row justify-content-center m-0 p-0">
+                        <button class="btn orange-bg mx-auto">Try Again</button>
+                    </div>
+                </div>
+                <svg width="92" height="92" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                    <path d="M46 92C71.4051 92 92 71.4051 92 46C92 20.5949 71.4051 0 46 0C20.5949 0 0 20.5949 0 46C0 71.4051 20.5949 92 46 92Z" fill="#32BA7C"/>
+                    <path d="M34.2461 66.7506L57.8991 90.4036C77.489 85.1796 92 67.3311 92 45.9998C92 45.5645 92 45.1292 92 44.6938L73.4259 27.5708L34.2461 66.7506Z" fill="#0AA06E"/>
+                    <path d="M47.1597 56.3029C49.1913 58.3344 49.1913 61.8171 47.1597 63.8486L42.9515 68.0568C40.92 70.0884 37.4373 70.0884 35.4058 68.0568L16.9768 49.4827C14.9452 47.4511 14.9452 43.9685 16.9768 41.9369L21.185 37.7287C23.2165 35.6972 26.6992 35.6972 28.7307 37.7287L47.1597 56.3029Z" fill="white"/>
+                    <path d="M63.2683 24.2334C65.2998 22.2018 68.7825 22.2018 70.814 24.2334L75.0222 28.4416C77.0538 30.4731 77.0538 33.9558 75.0222 35.9873L43.0979 67.7665C41.0664 69.7981 37.5837 69.7981 35.5522 67.7665L31.344 63.5583C29.3124 61.5268 29.3124 58.0441 31.344 56.0126L63.2683 24.2334Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0">
+                    <rect width="92" height="92" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                <h3 class="col-12 mb-2 text-center">Confirmed</h3>
+                <p class="col-12 text-center mb-3">Click the button below to finish transaction.</p>
+                <div class="col-12 mt-1 p-0">
+                    <div class="row justify-content-center m-0 p-0">
+                        <button type="submit" class="btn orange-bg mx-auto">Finish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="dashboardModal" class="dashboard-modal">
+        <span class="close-dashboard-modal">&times;</span>
+        <div class="modal-content p-5">
+            
+        </div>
+    </div> -->
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/chartjs.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        const trigger = document.querySelector('#confirmContentButton');
+        const confirmModal = document.querySelector('#confirmContent');
+        const alertModal = document.querySelector('#statusContent');
+        const backButton = document.querySelector('#backButton');
+        trigger.addEventListener('click', () => {
+            confirmModal.style.display = 'none';
+            alertModal.style.display = 'block';
+        })
+        backButton.addEventListener('click', () => {
+            confirmModal.style.display = 'block';
+            alertModal.style.display = 'none';
+        })
+    </script>
+    </form>
+</body>
+</html>

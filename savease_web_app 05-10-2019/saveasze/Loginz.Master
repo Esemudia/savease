@@ -1,0 +1,278 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Loginz.master.cs" Inherits="saveasze.Loginz" %>
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Savease</title>
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="icon" href="assets/images/fav_icon.ico" type="image/ico">
+
+    <style>
+        .container-fluid {
+            background: url('dashboard/assets/images/dashboard-bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right bottom;
+            -webkit-filter: blur(7px) brightness(10px);
+            height: 100vh;
+        }
+        
+        .container-fluid::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            opacity: 0.2;
+            filter: blur(7px) brightness(10px);
+        }
+        
+        .wrapper-div {
+            height: 85vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #FFFFFF;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            /* inset 0px 4px 4px rgba(0, 0, 0, 0.25) */
+            border-radius: 14px;
+        }
+        
+        .wrapper-div .row {
+            height: 100%;
+        }
+        
+        .inner-div,
+        .inner-form-div {
+            height: 100%;
+        }
+        
+        .inner-div {
+            background-image: url('assets/images/form-bg.jpg');
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: cover;
+            border-radius: 14px 0 0 14px;
+        }
+        
+        form {
+            font-size: 14px;
+            margin: auto;
+        }
+        
+        form h4 {
+            font-weight: bold;
+            font-size: 18px;
+            color: #131D33;
+            margin-top: 20px;
+        }
+        
+        form h4 span {
+            font-size: 14px;
+            color: #546E7A;
+        }
+        
+        form .form-control {
+            width: 100%;
+            border: unset;
+            position: relative;
+            margin-bottom: 27px;
+        }
+        /* .form-control label {
+            position: absolute;
+            top: 50%;
+            left: 16.5%;
+            font-size: 20px;
+            font-weight: 400;
+            color: #131D33;
+        } */
+        
+        .form-control label {
+            font-size: 14px;
+        }
+        
+        form .form-control .btn {
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .form-control input {
+            width: 100%;
+            font-size: 12px;
+            font-weight: 400;
+            color: #131D33;
+            outline: unset;
+            background-color: #E6E8EC;
+            background-repeat: no-repeat;
+            /* background-size: 6%; */
+            background-position: 15.5px;
+            padding: 8px 19px 8px 55px;
+            border: 1px solid #546E7A;
+            border-radius: 10px;
+        }
+        /* .form-control input:active label {
+            transform: translateY(0%);
+        } */
+        
+        .form-control a,
+        form p a,
+        .form-control a:focus,
+        form p a:focus,
+        .form-control a:hover,
+        form p a:hover,
+        .form-control a:active,
+        form p a:active {
+            font-size: 12px;
+            text-decoration: none;
+            color: #131D33;
+        }
+        
+        .form-control .button-blue {
+            height: 45px;
+            background-color: #131D33;
+            border-radius: 9px;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 21px;
+            color: #FFFFFF;
+        }
+        
+        form p {
+            font-size: 14px;
+            color: #607D8B;
+        }
+        
+        @media screen and (max-width: 991px) {
+            .wrapper-div {
+                height: 100vh;
+            }
+            .inner-div {
+                display: none;
+            }
+            .inner-form-div {
+                width: 100%;
+                height: 100vh;
+            }
+            .inner-form-div form {
+                margin-top: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-8 col-12 wrapper-div">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-12 inner-form-div d-flex pt-3 pb-3">
+    <form id="form1" runat="server" class="col-12 col-md-11 my-auto">
+     
+
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+    </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+     <script>
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
+
+        function showTab(n) {
+            // This function will display the specified tab of the form...
+            var x = document.getElementsByClassName("multiple-tab");
+            x[n].style.display = "block";
+            //... and fix the Previous/Next buttons:
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Register";
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Next";
+            }
+            //... and run a function that will display the correct step indicator:
+            fixStepIndicator(n)
+        }
+
+        function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("multiple-tab");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validateForm()) return false;
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form...
+            if (currentTab >= x.length) {
+                // ... the form gets submitted:
+                document.getElementById("regForm").submit();
+                return false;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+        }
+
+        function validateForm() {
+            // This function deals with validation of the form fields
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("multiple-tab");
+            y = x[currentTab].getElementsByTagName("input");
+            // A loop that checks every input field in the current tab:
+            for (i = 0; i < y.length; i++) {
+                // If a field is empty...
+                if (y[i].value == "") {
+                    // add an "invalid" class to the field:
+                    y[i].className += " invalid";
+                    // and set the current valid status to false
+                    valid = false;
+                }
+            }
+            // If the valid status is true, mark the step as finished and valid:
+            if (valid) {
+                document.getElementsByClassName("step")[currentTab].className += " finish";
+            }
+            return valid; // return the valid status
+        }
+
+        function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i, x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+            }
+            //... and adds the "active" class on the current step:
+            x[n].className += " active";
+        }
+    </script>   
+</body>
+</html>

@@ -1,0 +1,107 @@
+﻿/* Common Styles */
+.container
+{
+	width:600px;
+	border:solid 2px #bbbbbb;	
+	background-color:#fff;
+}
+.grid
+{
+	font-family:Arial;
+	font-size:8.75pt;
+}
+
+/* Title Bar and Pager Styles */
+.grid .titlebar
+{
+	padding-left:18px;
+	background:#666666 url(../img/title.gif) no-repeat left center;
+	height:28px;
+	line-height:28px;
+	font-size:11pt;
+	color:#fff;
+} 
+.grid .titlebar .title
+{
+	font-weight:bold;
+	float:left;
+}
+
+/* Pager Styles */
+.grid .pager
+{
+	float:right;
+	font-size:9pt;
+	padding-right:15px;
+}
+.grid .pager .status
+{
+	padding-left:5px;
+	padding-right:8px;
+}        
+/* Footer Pager Styles */
+.grid .footer .pager
+{
+	border-top:solid 1px #b0b0b0;
+	background:#e5e5e5;
+	float:none;
+	text-align:center;
+	padding:8px;
+}
+.grid .footer .pager INPUT.command
+{
+	padding:0px 6px;
+}
+.grid .footer .pager SPAN.command,        
+.grid .footer .pager SPAN.current,        
+.grid .footer .pager A.command
+{
+    color:#666666;
+    padding:0px 5px;
+    text-decoration:none;
+    border:none;
+    font-size:12px;
+}
+.grid .footer .pager A.command:hover
+{
+    border:solid 2px #bbbbbb;
+    background-color:#666666;
+    color:#fff;
+    padding:0px 3px;
+    text-decoration:none;
+}        
+.grid .footer .pager SPAN.current
+{
+	border:none;
+    font-weight:bold;
+    padding:0px 6px;
+    font-size:16px;
+}
+/* Table Styles */
+.grid .datatable{width:100%;}
+.grid .datatable TH, .grid .datatable TD
+{
+	text-align:left;
+} 
+.grid .datatable TH
+{
+	border-bottom:solid 1px #b0b0b0;
+	padding:6px 8px;
+	font-weight:bold;
+	background-color:#e5e5e5;
+}
+.grid .datatable TH A
+{
+	display:block;
+	text-decoration:none;
+	color:#000;
+}        
+.grid .datatable TD
+{
+	border-top:solid 1px #e0e0e0;
+	padding:6px 8px;
+	color:#111;
+}
+.grid .datatable TH A:hover{text-decoration:underline;}                
+.grid .datatable .altrow TD{background-color:#f9f9f9;}
+.grid .datatable TD.money{ color:Green; } 
